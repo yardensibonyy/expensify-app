@@ -9,7 +9,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server is Up!');
     console.log(__dirname);
 });
