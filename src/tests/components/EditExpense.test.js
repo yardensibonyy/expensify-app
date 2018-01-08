@@ -6,16 +6,16 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-let history, editExpense, removeExpense, wrapper;
+let history, editExpense, startRemoveExpense, wrapper;
 
 beforeEach(() => {
     editExpense = jest.fn();
-    removeExpense = jest.fn();
+    startRemoveExpense = jest.fn();
     history = { push: jest.fn() };
     wrapper = shallow(
         <EditExpensePage
             history={history}
-            removeExpense={removeExpense} 
+            startRemoveExpense={startRemoveExpense} 
             editExpense={editExpense}
             expense={expenses[2]}
         />
@@ -32,10 +32,10 @@ test('should handle editExpense correctly', () => {
     expect(editExpense).toHaveBeenLastCalledWith(expenses[2].id, expenses[2]);
 });
 
-test('should handle removeExpense correctly', () => {
+test('should handle startRemoveExpense correctly', () => {
     wrapper.find('button').simulate('click');
     expect(history.push).toHaveBeenLastCalledWith('/');
-    expect(removeExpense).toHaveBeenLastCalledWith({
+    expect(startRemoveExpense).toHaveBeenLastCalledWith({
         id: expenses[2].id
     });
 });
