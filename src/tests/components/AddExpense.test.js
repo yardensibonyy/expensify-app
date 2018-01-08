@@ -6,12 +6,12 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-let history, addExpense, wrapper;
+let history, startAddExpense, wrapper;
 
 beforeEach(() => {
-    addExpense = jest.fn();
+    startAddExpense = jest.fn();
     history = { push: jest.fn() };
-    wrapper = shallow(<AddExpensePage history={history} addExpense={addExpense} />)
+    wrapper = shallow(<AddExpensePage history={history} startAddExpense={startAddExpense} />)
 });
 
 test('should render AddExpensePage correctly', () => {
@@ -21,5 +21,5 @@ test('should render AddExpensePage correctly', () => {
 test('should handle onSubmit', () => {
     wrapper.find('ExpenseForm').prop('onSubmit')(expenses[1]);
     expect(history.push).toHaveBeenLastCalledWith('/');
-    expect(addExpense).toHaveBeenLastCalledWith(expenses[1]);
+    expect(startAddExpense).toHaveBeenLastCalledWith(expenses[1]);
 });
