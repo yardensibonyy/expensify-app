@@ -31,6 +31,7 @@ export { firebase, database as default };
 //     console.log(snapshot.key, snapshot.val());
 // });
 
+//ARRAY PARSING
 // database.ref('Expenses').on('value', (snapshot) => {
 //     const expenses = [];
 
