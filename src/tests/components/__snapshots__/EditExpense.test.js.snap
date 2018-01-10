@@ -16,7 +16,7 @@ exports[`should render edit expense correctly 1`] = `
     </div>
   </div>
   <div
-    className="content-container"
+    className="content-container list-body"
   >
     <ExpenseForm
       expense={
