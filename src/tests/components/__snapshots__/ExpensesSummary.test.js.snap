@@ -2,33 +2,81 @@
 
 exports[`should correctly render ExpensesSummary with 1 expense 1`] = `
 <div>
-  <br />
-  <h2>
-    Expenses Summary
-  </h2>
-  <p>
-    You had 
-    <span>
-      only one expense for
-       $1.95
-    </span>
-  </p>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h2>
+        Expenses Summary
+      </h2>
+      <p>
+        Viewing 
+        <span>
+          only one expense for
+          <span
+            className="page-header__title"
+          >
+             $1.95
+          </span>
+        </span>
+      </p>
+      <div
+        className="page-header__actions"
+      >
+        <Link
+          className="button"
+          replace={false}
+          to="/create"
+        >
+          Add Expense
+        </Link>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`should correctly render ExpensesSummary with multiple expenses 1`] = `
 <div>
-  <br />
-  <h2>
-    Expenses Summary
-  </h2>
-  <p>
-    You had 
-    <span>
-      3
-       expenses in a total of
-       $2,401.95
-    </span>
-  </p>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h2>
+        Expenses Summary
+      </h2>
+      <p>
+        Viewing 
+        <span>
+          <span
+            className="page-header__title"
+          >
+            3
+          </span>
+           expenses totalling
+          <span
+            className="page-header__title"
+          >
+             $2,401.95
+          </span>
+        </span>
+      </p>
+      <div
+        className="page-header__actions"
+      >
+        <Link
+          className="button"
+          replace={false}
+          to="/create"
+        >
+          Add Expense
+        </Link>
+      </div>
+    </div>
+  </div>
 </div>
 `;
