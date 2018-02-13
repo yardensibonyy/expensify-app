@@ -1,7 +1,5 @@
-# Git Commands
+# Expensify App - Search-Review-and-add-movies
 
-git init - Create a new git repo
-git status - View the changes to yout project code
-git add - Add files to staging area
-git commit - Creates a new commit with files from staging area
-git log - View recent commits
+# React, Redux, Jest, Firebase(DB and auth)
+
+https://nameless-stream-75222.herokuapp.com
