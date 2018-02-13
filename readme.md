@@ -1,4 +1,4 @@
-# Expensify App - Search-Review-and-add-movies
+# Expensify App - Expenses management
 
 # React, Redux, Jest, Firebase(DB and auth)
 
